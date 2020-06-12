@@ -1,12 +1,10 @@
 
 pragma solidity ^0.4.17;
 
-
 contract Collection {
 
     address public payee;
     address public collector;
-
 
     // Constuctor function to initiate collection contract
     function initCollection(address _payee, address _collector) public {
@@ -16,7 +14,6 @@ contract Collection {
 
      // function to allow the contract to recieve payments
      function() public payable {
-
      }
 
 
@@ -27,7 +24,5 @@ contract Collection {
         msg.sender.transfer(value);
         return true;
     }
-
-
 }
 
